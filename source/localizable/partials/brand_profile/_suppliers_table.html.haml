@@ -7,29 +7,25 @@
     %span.float-right.text-muted
 
     .table-responsive
-      %table.suppliers-table.table.table-sm.light-blue-bg.medium-grey
+      %table#suppliers-table.table.table-sm.light-blue-bg.medium-grey
         %thead
           %tr.white-bg.table-borderless.text-center.border-bottom-0
             %th.border-bottom-0.text-left.text-uppercase.navy-bg.lighter-blue{colspan: 2}
               = t('suppliers_table.sourcing_from_factories')
-              (
-              %span><
-                %span._factory-count 0
-                &nbsp;
-                = t('suppliers_table.found')
-              )
-            %th.border-bottom-0.text-uppercase{colspan: 2}= t('suppliers_table.number_of_workers')
+            %th.border-bottom-0.text-uppercase{colspan: 5}= t('suppliers_table.number_of_workers')
             %th.border-bottom-0.text-uppercase{colspan: 2}= t('suppliers_table.wage')
             %th.border-bottom-0.text-uppercase{colspan: 3}= t('suppliers_table.workers')
           %tr.light-blue-bg.border-top-0.border-bottom-2
-            %td.medium-blue-bg.border-0.text-left.text-uppercase= t('suppliers_table.company')
-            %td.medium-blue-bg.border-0= t('country')
-            %td
-              = t('suppliers_table.female_male_other')
-            %td= t('suppliers_table.permanent_temporary')
-            %td.other-blue-bg= supplier_table_header :average
-            %td.other-blue-bg= supplier_table_header :gap
-            %td= supplier_table_header :have_cba
-            %td= supplier_table_header :know_brand
-            %td= supplier_table_header :pregnancy_leave
+            %th.medium-blue-bg.border-0.text-left.text-uppercase= t('suppliers_table.company')
+            %th.medium-blue-bg.border-0= t('country')
+            %th.light-blue-bg.border-0 Female
+            %th.light-blue-bg.border-0 Male
+            %th.light-blue-bg.border-0 Other
+            %th.light-blue-bg.border-0 Permanent
+            %th.light-blue-bg.border-0 Temporary
+            %th.other-blue-bg= supplier_table_header :average
+            %th.other-blue-bg= supplier_table_header :gap
+            %th= supplier_table_header :have_cba
+            %th= supplier_table_header :know_brand
+            %th= supplier_table_header :pregnancy_leave
         %tbody

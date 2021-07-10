@@ -564,6 +564,46 @@ main {
   }
 }
 
+.dataTables_wrapper {
+  .dataTables_filter, .dataTables_info, .dataTables_processing, .dataTables_paginate,
+  .dataTables_length {
+    color: $white;
+    select, input {
+      background: $medium-grey;
+    }
+  }
+  .dataTables_paginate {
+    .paginate_button {
+      background: $medium-grey;
+      &.disabled {
+        color: $sky-blue !important
+      }
+      &:active, &:hover, &.current, &.current:hover, &.current:active {
+        background: $light-blue;
+        color: $white !important;
+        border-color: $lighter-blue;
+      }
+    }
+  }
+}
+
+.dataTable {
+  font-size: 0.7rem;
+  td {
+    background-color: $lighter-blue;
+  }
+  //th {
+  //  white-space: nowrap;
+  //  height: 140px;
+  //  label {
+  //    transform: /* Magic Numbers */
+  //      translate(25px, 51px) /* 45 is really 360 - 45 */
+  //      rotate(315deg);
+  //    transform-origin: top left;
+  //  }
+  //}
+}
+
 .suppliers-table tbody td {
   white-space: nowrap;
   &:first-child {
